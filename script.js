@@ -27,7 +27,7 @@ new Chart(ctx, {
 
 
 // export function
-function exportForecastDataToExcel() {
+function exportToExcel() {
 
     var workbook = new $.ig.excel.Workbook($.ig.excel.WorkbookFormat.excel2007);
     var sheet = workbook.worksheets().add('Sheet1');
@@ -36,7 +36,7 @@ function exportForecastDataToExcel() {
     sheet.columns(4).setWidth(80, $.ig.excel.WorksheetColumnWidthUnit.pixel);
     sheet.columns(6).setWidth(96, $.ig.excel.WorksheetColumnWidthUnit.pixel);
 
-    // Format some rows and columns that should have similar formatting so we don't have to set it on individual cells.
+    // Format some rows and columns 
     sheet.rows(0).cellFormat().font().bold(true);
 
     sheet.getCell('A1').value('Color');
